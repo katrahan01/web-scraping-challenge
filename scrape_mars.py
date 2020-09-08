@@ -34,7 +34,7 @@ def scrape():
             print(image)
             image_list.append(image)
         try:
-            browser.click_link_by_partial_text('more')    
+            browser.links.find_by_partial_text('more')    
         except:
             print("Scraping Complete")
     images= image_list[0]['style'].split("'")[1]
