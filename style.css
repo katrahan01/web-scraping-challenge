@@ -1,0 +1,36 @@
+.h2{
+    text-align: Center;
+    padding-top:18%;
+    padding-bottom: 5%;
+  }
+.h5{
+  text-align: center;
+  color: black;
+}
+.h22{
+    text-align: Left;
+    padding-top:18%;
+    padding-bottom: 5%;
+  }
+.jus{
+  padding-top: 80px;
+  text-align: center;
+}
+.p {
+    padding-left:10px;
+    text-align: justify;
+}
+.pix{
+      width:120%;
+  }
+.pix1{
+    margin-bottom:5px;
+    width: 60%;
+    float: left;
+    margin-right: 10px;
+}
+#img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

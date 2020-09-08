@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Missions to Mars</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </head>
+  
+<body>
+  <div class="container">
+
+    <div class="jumbotron text-center">
+      <h1>Mission to Mars</h1>
+      <p><a class="btn btn-primary btn-info" href="/scrape" role="button">Lastest Mars Infomation</a></p>
+    </div>
+    
+    <div class="container">     
+      <div class="row">
+        <div class="col-sm-6 bg-light">
+          <h3>
+            Mars News
+        </h3>
+        <strong><p>
+            {{mars_info.news_title}}
+        </p></strong>
+        <p>
+            {{mars_info.news_p}}
+        </p>
+       </div>
+        <div class="col-sm-6 bg-light">
+          <h3>
+            Mars Facts
+          </h3>
+          {{mars_info.mars_df|safe}}
+      </div>
+        <div class="col-sm-3 bg-light">
+          <h3>
+            Latest Featured Image
+          </h3>
+          <a href={{mars_info.featured_image_url}}>
+            <img class="pix" src= {{mars_info.featured_image_url}} alt="Featured Image" width=400%>
+          </a>
+          </div>
+        <div class="row">
+        <div class = "col-sm-12 bg-light">
+          <h3>
+            Mars Hemispheres
+          </h3>
+          {% for hemis in mars_info.hemisphere_image_urls %}
+          <div class="container">     
+            <div class="row">
+            <div class = "col-sm-6 bg-light">
+              <h4>
+                {{hemis["title_hemis"]}}
+              </h4>
+              <a href={{hemis["img_url"]}}>
+                  <img class="img-fluid" id = "image" src={{hemis["img_url"]}} alt={{hemis['title']}} href={{hemis["img_url"]}}/>
+              </a>
+            </div>
+          </div>
+          </div>
+          {% endfor %}
+      </div>
+      </div>
+    </div>
+
+</body>
+
+</html>
