@@ -20,7 +20,7 @@ def scrape():
     results_dict['news_title'] = news_title
     results_dict['news_p'] = news_p
 
-    #Mars Space Images - Featured Image
+    # Mars Space Images - Featured Image
 
     url_image = 'https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars'
     browser.visit(url_image)
