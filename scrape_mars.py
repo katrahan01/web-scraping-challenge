@@ -54,7 +54,7 @@ def scrape():
 
     results_dict['mars_df'] = mars_df
 
-    ### Mars Hemispheres
+    # Mars Hemispheres
 
     hemis_url= 'https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars'
     browser.visit(hemis_url)
